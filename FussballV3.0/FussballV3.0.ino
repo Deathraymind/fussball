@@ -179,6 +179,3 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 
 
-
-
-//Made by Bowyn Rosch 2023-2024 With Blood Sweat and alot of hair pulling! Thanks Barns!
