@@ -29,8 +29,8 @@ int close = 180;
 // Tilt Variables
 int tiltSwitchRedPin = D6;
 int tiltSwitchBluePin = D7;
-bool tiltSwitchRedState = LOW;
-bool tiltSwitchBlueState = LOW;
+// bool tiltSwitchRedState = LOW;
+// bool tiltSwitchBlueState = LOW; Was probs cause issues
 
 
 void setup() {
