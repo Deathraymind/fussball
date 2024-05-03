@@ -83,6 +83,21 @@ void loop() {
         allow = 0;
     }
 
+
+        // Closes blue side servo if they get 9 points
+    if (bluescore >= 9) {
+        blueServo.write(close);
+        Serial.print("Red servo closed");
+        
+    }
+
+    // Closes blue side servo if they get 9 points
+    if (redscore >= 9) {
+        redServo.write(close);
+        Serial.print("Blue servo closed");
+        
+    }
+
     if (allow == 1){
       redServo.write(open);
       blueServo.write(open);
@@ -127,19 +142,7 @@ void loop() {
     // Publish the JSON message to MQTT
     client.publish("scores", jsonStr);
     
-    // Closes blue side servo if they get 9 points
-    if (bluescore >= 9) {
-        blueServo.write(close);
-        Serial.print("Red servo closed");
-        
-    }
 
-    // Closes blue side servo if they get 9 points
-    if (redscore >= 9) {
-        redServo.write(close);
-        Serial.print("Blue servo closed");
-        
-    }
     
     client.setCallback(callback);
 
